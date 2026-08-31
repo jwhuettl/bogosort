@@ -1,11 +1,11 @@
 import random
 
 
-def build_deck(size):
-  return list(range(0, size))
+def build_deck(size: int):
+  return list(range(size))
 
 # writing our own shuffle (fisher-yates)
-def fy_shuffle(array):
+def fy_shuffle(array: list[int]):
 
   for i in reversed(array):
     j = random.randint(0, len(array) - 1)
@@ -16,8 +16,8 @@ def fy_shuffle(array):
 
   return array
 
-#
-def bogo_sort(input):
+
+def bogo_sort(input: list[int]):
 
   sorted = False
   attempts = 0
