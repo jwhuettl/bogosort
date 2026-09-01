@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 def build_deck(size: int):
@@ -38,12 +39,7 @@ def bogo_sort(input: list[int]):
 
   return attempts
 
-
-
-
-print("enter a size to be sorted:")
-size = int(input())
-
+size = int(sys.argv[1])
 
 input = fy_shuffle(build_deck(size))
 total = bogo_sort(input)
