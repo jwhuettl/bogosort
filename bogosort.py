@@ -2,7 +2,7 @@ import random
 import sys
 
 
-def build_deck(size: int):
+def build_array(size: int):
   return list(range(size))
 
 # writing our own shuffle (fisher-yates)
@@ -41,6 +41,6 @@ def bogo_sort(input: list[int]):
 
 size = int(sys.argv[1])
 
-input = fy_shuffle(build_deck(size))
+input = fy_shuffle(build_array(size))
 total = bogo_sort(input)
 print("Attempts: ", total)
