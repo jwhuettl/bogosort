@@ -6,12 +6,47 @@ function buildArray(size) {
 }
 
 function fyShuffle(list) {
-  return list
+  for (let i = (size - 1); i >= 0; i--) {
+    let j = Math.floor(Math.random() * (size - 1));
+
+    let tmp = list[i];
+    list[i] = list[j];
+    list[j] = tmp;
+  }
+
+  return list;
 }
 
 function bogosort(input) {
 
+  sorted = true;
+  attempts = 0;
+
+  do {
+
+    sorted = true;
+
+    att = fyShuffle(input);
+
+    // console.log(att);
+
+    att.forEach(function (val, index) {
+      if (val != index) {
+        sorted = false;
+      }
+    })
+
+    attempts += 1;
+
+  } while (!sorted);
+
+  // return [att, attempts];
+  return attempts;
+
 }
 
 let size = parseInt(process.argv[2]);
-// let output = buildArray(size);
+let input = buildArray(size);
+let output = fyShuffle(input);
+let result = bogosort(output);
+console.log(result);
