@@ -46,7 +46,6 @@ function bogosort(input) {
 }
 
 let size = parseInt(process.argv[2]);
-let input = buildArray(size);
-let output = fyShuffle(input);
-let result = bogosort(output);
-console.log(result);
+let input = fyShuffle(buildArray(size));
+let total = bogosort(input);
+console.log("Attempts: ", total);
