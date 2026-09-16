@@ -1,17 +1,17 @@
 ## BOGOSORT
 
-Implementing bogosort in every language that I know, as a test for myself. I will not be using a built-in shuffle function and will write my own for every language. 
+This repository will contain my favorite bad sorting algorithm in all of the programming languages that I know well. Also, I think that this will be a good introduction to what languages I know and how I like to program. 
 
-All languages will be kept to a single file and compiled languages will have their compiled versions ignored.
+#### Bogosort
 
-All programs/scripts should have a verbose (-v) which will print out each attempt but that might be a feature for another time. 
+As an algorithm, bogosort is not very good as it sorts by shuffling the input and it never saves any correct items in the ouput. Due to this, at even moderate input sizes (10+) bogosort can take a long time and a large number of attempts. 
 
-I would recommend keeping the input size on the lower side as it truly can take forever if the input is over 20. 
+Since some languages do not have a built-in shuffle function, all implementations will use the [Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) algorithm. I chose Fisher-Yates becuase the first time I wrote bogosort I was using Python and the built-in `shuffle()` uses the algorithm.  
 
 #### Languages
 
--[ ] C
--[ ] JavaScript
--[ ] PHP
--[ ] Python
--[ ] Shell (bash)
+- [ ] C
+- [x] JavaScript
+- [ ] PHP
+- [x] Python
+- [ ] Shell (bash)
