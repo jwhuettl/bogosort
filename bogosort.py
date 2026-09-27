@@ -39,6 +39,10 @@ def bogo_sort(input: list[int]):
 
   return attempts
 
+if (len(sys.argv) <= 1):
+  print("Error: Missing input size", file=sys.stderr)
+  sys.exit()
+
 size = int(sys.argv[1])
 
 input = fy_shuffle(build_array(size))
