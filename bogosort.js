@@ -45,6 +45,10 @@ function bogosort(input) {
 
 }
 
+if (process.argv.length < 3) {
+  throw new Error('Missing input size.');
+}
+
 let size = parseInt(process.argv[2]);
 let input = fyShuffle(buildArray(size));
 let total = bogosort(input);
